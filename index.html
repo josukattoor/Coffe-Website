@@ -6,81 +6,222 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
         rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
         crossorigin="anonymous">
+
+    <style>
+        .fixed-breadcrumb {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+        }
+
+        .content {
+            margin-top: 70px; /* Adjust this margin to make space for the fixed breadcrumb */
+        }
+
+        .logo img {
+            max-height: 50px; /* Adjust the height as needed */
+        }
+    </style>
 </head>
 
-<body>
-    <header class="bg-dark text-white">
+<body data-spy="scroll" data-target=".navbar" data-offset="1000"> <!-- Adjust the offset value -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-breadcrumb">
         <div class="container">
-            <!-- Company Logo and Company Name -->
-            <div class="d-flex align-items-center justify-content-between">
-                <img src="mobile-new-menu-cafe-coffee-day.jpg" alt="Company Logo" class="my-4 img-fluid"
-                    style="max-width: 25%; height: auto;">
-                <h1 class="my-4 display-4 font-weight-bold">Kaffe Coffee</h1>
-                <!-- Placeholder for another image on the far right -->
-                <img src="coffemachine.jpg" alt="Placeholder Image" class="img-fluid"
-                    style="max-width: 25%; height: auto;">
+            <div class="logo">
+                <img src="mobile-new-menu-cafe-coffee-day.jpg" alt="Company Logo">
             </div>
-            <nav class="navbar navbar-expand-lg navbar-dark">
-                <!-- Centered navigation links with styling -->
-                <ul class="navbar-nav mx-auto">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
+                        <a class="nav-link" href="#home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="products.html">Products</a>
+                        <a class="nav-link" href="#products">Products</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="aboutus.html">About Us</a>
+                        <a class="nav-link" href="#aboutus">About Us</a>
                     </li>
                 </ul>
-            </nav>
+            </div>
         </div>
-    </header>
+    </nav>
 
-    <div class="container my-4">
-        <div class="row">
-            <div class="col-md-3">
-                <h2>Who Are We?</h2>
+    <section id="home" class="container my-4 content brown-bg">
+        <div class="container my-4">
+            <div class="row">
+                <div class="container my-4">
+                    <div class="row">
+                        <div></div>
+                        <div></div>
+
+                        <div class="col-md-3">
+                            <h2>Who Are We?</h2>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                                the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                                of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+                                but also the leap into electronic typesetting, remaining essentially unchanged. It was
+                                popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and
+                                more recently with desktop publishing software like Aldus PageMaker including versions of Lorem
+                                Ipsum.</p>
+                        </div>
+                        <div class="col-md-3">
+                            <h2>What Do We Do?</h2>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                                the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                                of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+                                but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised
+                                in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently
+                                with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                        </div>
+                        <div class="col-md-3">
+                            <h2>Why Us?</h2>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                                the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                                of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+                                but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised
+                                in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently
+                                with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                        </div>
+                        <div class="col-md-3">
+                            <h2>Coffee Party, That's How It Works!</h2>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                                the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                                of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+                                but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised
+                                in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently
+                                with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                        </div>
+                    </div>
+                </div> <!-- Your content for the Home section goes here -->
+            </div>
+        </div>
+    </section>
+
+    <section id="products" class="container my-4 content">
+        <div class="container my-4">
+            <div class="row">
+                <div class="container my-4">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <h2>Coffee Machines</h2>
+                            <div class="row">
+                                <!-- Coffee Machines Grid -->
+                                <div class="col-md-6 col-lg-4 mb-4">
+                                    <div class="card">
+                                        <img src="coffemachine.jpg" class="card-img-top" alt="Coffee Machine Model 1">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Model: Coffee Machine Model 1</h5>
+                                            <p class="card-text">Price: 1000kr</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-4 mb-4">
+                                    <div class="card">
+                                        <img src="coffemachine.jpg" class="card-img-top" alt="Coffee Machine Model 1">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Model: Coffee Machine Model 1</h5>
+                                            <p class="card-text">Price: 1000kr</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-4 mb-4">
+                                    <div class="card">
+                                        <img src="coffemachine.jpg" class="card-img-top" alt="Coffee Machine Model 1">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Model: Coffee Machine Model 1</h5>
+                                            <p class="card-text">Price: 1000kr</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-4 mb-4">
+                                    <div class="card">
+                                        <img src="coffemachine.jpg" class="card-img-top" alt="Coffee Machine Model 1">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Model: Coffee Machine Model 1</h5>
+                                            <p class="card-text">Price: 1000kr</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-4 mb-4">
+                                    <div class="card">
+                                        <img src="coffemachine.jpg" class="card-img-top" alt="Coffee Machine Model 1">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Model: Coffee Machine Model 1</h5>
+                                            <p class="card-text">Price: 1000kr</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Repeat for 5 coffee machines -->
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <h2>Coffee Party</h2>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h3>Companies</h3>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <h3>Individuals</h3>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Your content for the Products section goes here -->
+            </div>
+        </div>
+    </section>
+
+    <section id="aboutus" class="container my-4 content">
+        <div class="container my-4">
+            <div class="main-content">
+                <h2>About Us</h2>
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
                     the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
                     of type and scrambled it to make a type specimen book. It has survived not only five centuries,
-                    but also the leap into electronic typesetting, remaining essentially unchanged. It was
-                    popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and
+                    but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised
+                    in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and
                     more recently with desktop publishing software like Aldus PageMaker including versions of Lorem
                     Ipsum.</p>
-            </div>
-            <div class="col-md-3">
-                <h2>What Do We Do?</h2>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                    the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
-                    of type and scrambled it to make a type specimen book. It has survived not only five centuries,
-                    but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised
-                    in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently
-                    with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-            </div>
-            <div class="col-md-3">
-                <h2>Why Us?</h2>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                    the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
-                    of type and scrambled it to make a type specimen book. It has survived not only five centuries,
-                    but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised
-                    in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently
-                    with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-            </div>
-            <div class="col-md-3">
-                <h2>Coffee Party, That's How It Works!</h2>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                    the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
-                    of type and scrambled it to make a type specimen book. It has survived not only five centuries,
-                    but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised
-                    in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently
-                    with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                <h3>Contact Details</h3>
+    
+                <div class="row">
+                    <div class="col-md-6 col-12"> <!-- Use col-12 for full width on mobile -->
+                        <div class="contact text-center">
+                            <img src="person1.jpg" alt="CEO" class="img-fluid">
+                            <p style="color: blue;">Ian Jossy</p> <!-- Name with blue color -->
+                            <p><i class="fas fa-phone"></i> <span style="color: green;">0761233333</span></p> <!-- Phone number with green color -->
+                            <p><a href="mailto:ceoadventure@gmail.com">ceoadventure@gmail.com</a></p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12"> <!-- Use col-12 for full width on mobile -->
+                        <div class="contact text-center">
+                            <img src="person2.jpg" alt="HR Manager" class="img-fluid">
+                            <p style="color: blue;">Nian</p> <!-- Name with blue color -->
+                            <p><i class="fas fa-phone"></i> <span style="color: green;">0765555555</span></p> <!-- Phone number with green color -->
+                            <p><a href="mailto:hradventure@gmail.com">hradventure@gmail.com</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="customer-service bg-light py-4 text-center">
+                    <h3>Contact Customer Service</h3>
+                    <p>For assistance, please call our customer service:</p>
+                    <p class="font-weight-bold">Customer Service: 123-456-7890</p>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
 
     <footer class="bg-dark text-white text-center py-2">
-        <p>&copy; 2023 Jossy's Adventure | Webmaster: Jossy Sebastian</p>
+        <p>&copy; 2023 Kaffe Coffee | Webmaster: Jossy Sebastian</p>
     </footer>
 
     <!-- Link to Bootstrap JS and Popper.js (for Bootstrap dropdowns) -->
